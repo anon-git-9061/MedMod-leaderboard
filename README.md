@@ -1,4 +1,4 @@
-# 🩻 MedMod: A Multimodal Benchmark for Clinical Prediction Tasks with Electronic Health Records and Chest X-Ray Images
+# 🩻 MedMod: A Multimodal Benchmark for Clinical Prediction Tasks with Electronic Health Records and Chest X-Ray Scans
 
 Overview
 ============
@@ -10,7 +10,7 @@ Citation
 If you find MedMod useful for your research and applications, please cite using this BibTeX:
 ```bibtex
 @misc{author2025medmod,
-    title={MedMod: A Multimodal Benchmark for Clinical Prediction Tasks with Electronic Health Records and Chest X-Ray Images},
+    title={MedMod: A Multimodal Benchmark for Clinical Prediction Tasks with Electronic Health Records and Chest X-Ray Scans},
     url={https://anonymous.4open.science/r/MedMod-9061/},
     author={Authors},
     month={February},
