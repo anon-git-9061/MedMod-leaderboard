@@ -1,0 +1,506 @@
+---
+layout: default
+show_home_btn: True
+show_submit_btn: True
+show_multimodal_btn: True
+---
+<h1 style="text-align:center"> Uni-modal baselines Electronic Health Records (EHR)</h1>
+<br>
+<hr>
+
+<h2 style="text-align:center"> Supervised models</h2>
+<table id="uniModalEHR" class="display dt-head-right">
+    <thead>
+        <tr>
+            <th rowspan="2" width="15%">Method</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">In-hospital mortality</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Clinical conditions</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Decompensation</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Length of stay</th>
+        </tr>
+        <tr>
+            <!-- Mortality -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+            
+            <!-- Clinical conditions -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+
+            <!-- Decompensation -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+
+            <!-- Length of stay -->
+            <th>KAPPA</th>
+            <th>MAD</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <tr>
+            <td>Unimodal EHR</td>
+            <!-- Mortality -->
+            <td>0.829</td>
+            <td>0.502</td>
+
+            <!-- Clinical conditions -->
+            <td>0.720</td>
+            <td>0.409</td>
+
+            <!-- Decompensation -->
+            <td>0.862</td>
+            <td>0.252</td>
+
+            <!-- Length of stay -->
+            <td>0.380</td>
+            <td>143.6</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 style="text-align:center"> Self-supervised models: linear probing</h2>
+<table id="linearProbingEHR" class="display dt-head-right">
+    <thead>
+        <tr>
+            <th rowspan="2" width="15%">Method</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">In-hospital mortality</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Clinical conditions</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Decompensation</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Length of stay</th>
+        </tr>
+        <tr>
+            <!-- Mortality -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+            
+            <!-- Clinical conditions -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+
+            <!-- Decompensation -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+
+            <!-- Length of stay -->
+            <th>KAPPA</th>
+            <th>MAD</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ConVIRT</td>
+            <!-- Mortality -->
+            <td>0.789</td>
+            <td>0.445</td>
+                     
+            <!-- Clinical conditions -->
+            <td>0.664</td>
+            <td>0.365</td>
+
+            <!-- Decompensation -->
+            <td>0.873</td>
+            <td>0.247</td>
+
+            <!-- Length of stay -->
+            <td>0.360</td>
+            <td>137.4</td>
+        </tr>
+
+        <tr>
+            <td>VICReg</td>
+            <!-- Mortality -->
+            <td>0.801</td>
+            <td>0.437</td>
+                     
+            <!-- Clinical conditions -->
+            <td>0.648</td>
+            <td>0.321</td>
+
+            <!-- Decompensation -->
+            <td>0.884</td>
+            <td>0.264</td>
+
+            <!-- Length of stay -->
+            <td>0.374</td>
+            <td>140.1</td>
+        </tr>
+
+        <tr>
+            <td>ALIGN</td>
+            <!-- Mortality -->
+            <td>0.812</td>
+            <td>0.453</td>
+
+            <!-- Clinical conditions -->
+            <td>0.655</td>
+            <td>0.335</td>
+
+            <!-- Decompensation -->
+            <td>0.871</td>
+            <td>0.253</td>
+
+            <!-- Length of stay -->
+            <td>0.377</td>
+            <td>138.7</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 style="text-align:center"> Self-supervised models: fine-tuning</h2>
+<table id="fineTuningEHR" class="display dt-head-right">
+    <thead>
+        <tr>
+            <th rowspan="2" width="15%" data-dt-order="disable">Method</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">In-hospital mortality</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Clinical conditions</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Decompensation</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Length of stay</th>
+        </tr>
+        <tr>
+            <!-- Mortality -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+            
+            <!-- Clinical conditions -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+
+            <!-- Decompensation -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+
+            <!-- Length of stay -->
+            <th>KAPPA</th>
+            <th>MAD</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ConVIRT</td>
+            <!-- Mortality -->
+            <td>0.822</td>
+            <td>0.453</td>
+
+            <!-- Clinical conditions -->
+            <td>0.721</td>
+            <td>0.425</td>
+
+            <!-- Decompensation -->
+            <td>0.842</td>
+            <td>0.090</td>
+
+            <!-- Length of stay -->
+            <td>0.389</td>
+            <td>103.2</td>
+        </tr>
+
+        <tr>
+            <td>VICReg</td>
+            <!-- Mortality -->
+            <td>0.827</td>
+            <td>0.463</td>
+
+            <!-- Clinical conditions -->
+            <td>0.730</td>
+            <td>0.412</td>
+
+            <!-- Decompensation -->
+            <td>0.853</td>
+            <td>0.085</td>
+
+            <!-- Length of stay -->
+            <td>0.384</td>
+            <td>104.5</td>
+        </tr>
+
+        <tr>
+            <td>ALIGN</td>
+            <!-- Mortality -->
+            <td>0.831</td>
+            <td>0.470</td>
+               
+            <!-- Clinical conditions -->
+            <td>0.715</td>
+            <td>0.425</td>
+
+            <!-- Decompensation -->
+            <td>0.845</td>
+            <td>0.095</td>
+
+            <!-- Length of stay -->
+            <td>0.377</td>
+            <td>105.3</td>
+
+        </tr>
+    </tbody>
+</table>
+
+<h1 style="text-align:center"> Uni-modal baselines Chest X-ray images (CXR)</h1>
+<br>
+<hr>
+
+<h2 style="text-align:center"> Supervised model</h2>
+    <table id="uniModalCXR" class="display dt-head-right">
+        <thead>
+            <tr>
+                <th rowspan="2" width="15%" data-dt-order="disable">Method</th>
+                <th colspan="2" text-align="center" data-dt-order="disable">In-hospital mortality</th>
+                <th colspan="2" text-align="center" data-dt-order="disable">Clinical conditions</th>
+                <th colspan="2" text-align="center" data-dt-order="disable">Decompensation</th>
+                <th colspan="2" text-align="center" data-dt-order="disable">Radiology</th>
+            </tr>
+            <tr>
+                <!-- Mortality -->
+                <th>AUROC</th>
+                <th>AUPRC</th>
+                
+                <!-- Clinical conditions -->
+                <th>AUROC</th>
+                <th>AUPRC</th>
+    
+                <!-- Decompensation -->
+                <th>AUROC</th>
+                <th>AUPRC</th>
+    
+                <!-- Radiology -->
+                <th>AUROC</th>
+                <th>AUPRC</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Unimodal CXR</td>
+                <!-- Mortality -->
+                <td>0.679</td>
+                <td>0.246</td>
+ 
+                <!-- Clinical conditions -->
+                <td>0.673</td>
+                <td>0.360</td>
+    
+                <!-- Decompensation -->
+                <td>0.694</td>
+                <td>0.037</td>
+    
+                <!-- Radiology -->
+                <td>0.701</td>
+                <td>0.321</td>
+            </tr>
+        </tbody>
+    </table>
+    
+<h2 style="text-align:center"> Self-supervised models: linear probing</h2>
+<table id="linearProbingCXR" class="display dt-head-right">
+    <thead>
+        <tr>
+            <th rowspan="2" width="15%">Method</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">In-hospital mortality</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Clinical conditions</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Decompensation</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Radiology</th>
+        </tr>
+        <tr>
+            <!-- Mortality -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+            
+            <!-- Clinical conditions -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+
+            <!-- Decompensation -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+
+            <!-- Radiology -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+            <td>ConVIRT</td>
+            <!-- Mortality -->
+            <td>0.687</td>
+            <td>0.275</td>
+
+            <!-- Clinical conditions -->
+            <td>0.652</td>
+            <td>0.326</td>
+
+            <!-- Decompensation -->
+            <td>0.723</td>
+            <td>0.037</td>
+
+            <!-- Radiology -->
+            <td>0.670</td>
+            <td>0.275</td>
+        </tr>
+
+        <tr>
+            <td>VICReg</td>
+            <!-- Mortality -->
+            <td>0.641</td>
+            <td>0.239</td>
+
+            <!-- Clinical conditions -->
+            <td>0.589</td>
+            <td>0.263</td>
+
+            <!-- Decompensation -->
+            <td>0.613</td>
+            <td>0.029</td>
+
+            <!-- Radiology -->
+            <td>0.604</td>
+            <td>0.245</td>
+        </tr>
+
+        <tr>
+            <td>ALIGN</td>
+            <!-- Mortality -->
+            <td>0.675</td>
+            <td>0.254</td>
+
+            <!-- Clinical conditions -->
+            <td>0.621</td>
+            <td>0.308</td>
+
+            <!-- Decompensation -->
+            <td>0.524</td>
+            <td>0.021</td>
+
+            <!-- Radiology -->
+            <td>0.610</td>
+            <td>0.263</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 style="text-align:center"> Self-supervised models: fine-tuning</h2>
+<table id="fineTuningCXR" class="display dt-head-right">
+    <thead>
+        <tr>
+            <th rowspan="2" width="15%">Method</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">In-hospital mortality</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Clinical conditions</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Decompensation</th>
+            <th colspan="2" text-align="center" data-dt-order="disable">Radiology</th>
+        </tr>
+        <tr>
+            <!-- Mortality -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+            
+            <!-- Clinical conditions -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+
+            <!-- Decompensation -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+
+            <!-- Radiology -->
+            <th>AUROC</th>
+            <th>AUPRC</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+            <td>ConVIRT</td>
+            <!-- Mortality -->
+            <td>0.620</td>
+            <td>0.205</td>
+  
+            <!-- Clinical conditions -->
+            <td>0.660</td>
+            <td>0.266</td>
+
+            <!-- Decompensation -->
+            <td>0.534</td>
+            <td>0.023</td>
+
+            <!-- Radiology -->
+            <td>0.638</td>
+            <td>0.259</td>
+        </tr>
+
+        <tr>
+            <td>VICReg</td>
+            <!-- Mortality -->
+            <td>0.590</td>
+            <td>0.212</td>
+
+            <!-- Clinical conditions -->
+            <td>0.645</td>
+            <td>0.222</td>
+
+            <!-- Decompensation -->
+            <td>0.552</td>
+            <td>0.019</td>
+
+            <!-- Radiology -->
+            <td>0.615</td>
+            <td>0.261</td>
+        </tr>
+
+        <tr>
+            <td>ALIGN</td>
+            <!-- Mortality -->
+            <td>0.603</td>
+            <td>0.198</td>
+ 
+            <!-- Clinical conditions -->
+            <td>0.550</td>
+            <td>0.259</td>
+
+            <!-- Decompensation -->
+            <td>0.560</td>
+            <td>0.017</td>
+
+            <!-- Radiology -->
+            <td>0.595</td>
+            <td>0.233</td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+$(document).ready( function () {
+    $('#uniModalEHR').DataTable();
+} );
+
+$(document).ready( function () {
+    $('#linearProbingEHR').DataTable();
+} );
+
+$(document).ready( function () {
+    $('#fineTuningEHR').DataTable();
+} );
+
+$(document).ready( function () {
+    $('#uniModalCXR').DataTable();
+} );
+
+$(document).ready( function () {
+    $('#linearProbingCXR').DataTable();
+} );
+
+$(document).ready( function () {
+    $('#fineTuningCXR').DataTable();
+} );
+</script>
+
+<a href="https://forms.gle/VapUvQMZ8hsADUWA8" class="btn_update">Submit new results</a>
+
+<h1 id="leaderboards">Leaderboards</h1>
+<div class="leaderboardcontainer">
+<a href="#" class="btn_update">Back to top</a>
+<br>
+<a href="./" class="btn_update">Home</a>
+<br>
+<a href="multimodal.html" class="btn_update">Multimodal baselines</a>
+</div>

@@ -1,0 +1,11 @@
+title: MedMod
+description: Multimodal Benchmark for Medical Prediction Tasks with Electronic Health Records and Chest X-Ray Images
+show_downloads: true
+google_analytics:
+theme: jekyll-theme-cayman
+github:
+  repository_name: "MedMod"
+  repository_url: https://anonymous.4open.science/r/MedMod-9061/README.md
+  paper_url: 
+  owner_name: 
+  owner_url: 
